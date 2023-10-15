@@ -1,8 +1,9 @@
 #!/bin/zsh
 
-if [[ -z $1 ]];then
-	echo "null string"
+n=4
+if [[ $n -lt 10 ]]; then
+	echo "one digit number"
 else
-	echo "string : $1"
+	echo "two digit number"
 fi
 
