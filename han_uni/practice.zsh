@@ -1,9 +1,11 @@
 #!/bin/zsh
 
-n=4
-if [ $n -lt 10 ]; then
+var=$1
+
+if [[ -z $var ]];then
+	echo "enter a number"
+elif [[ $var -lt 10 ]];then
 	echo "one digit number"
 else
-	echo "two digit number"
+	echo "over one digit number"
 fi
-
