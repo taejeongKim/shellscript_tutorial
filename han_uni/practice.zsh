@@ -1,11 +1,10 @@
 #!/bin/zsh
 
-var=$1
-
-if [[ -z $var ]];then
-	echo "enter a number"
-elif [[ $var -lt 10 ]];then
-	echo "one digit number"
-else
-	echo "over one digit number"
+if [[ -z $1 ]];then
+	echo "please provide a directory"
+	exit 1
 fi
+
+target_dir=./backup/
+of="$(date +%Y%m%d)_backup.tar"
+tar -cvf $target_dir$of $@
